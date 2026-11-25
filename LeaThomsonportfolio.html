@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lea Thomson — Instructional Design & Training Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.85);
+            border: 1px solid rgba(51, 65, 85, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-40 w-full glass-card border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    LT
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block">Lea Thomson</span>
+                    <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">End-to-End Learning Consultant</span>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="#about" class="hover:text-brand-600 transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-brand-600 transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 transition" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon dark:hidden text-slate-700"></i>
+                    <i class="fa-solid fa-sun hidden dark:block text-amber-400"></i>
+                </button>
+                <a href="#portfolio" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 transition shadow-sm shadow-brand-500/20">
+                    Explore Work
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="about" class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32 bg-gradient-to-b from-indigo-50/50 via-slate-50 to-slate-50 dark:from-slate-900/40 dark:via-slate-950 dark:to-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/60 text-brand-600 dark:text-brand-400 text-xs font-semibold uppercase tracking-wider border border-brand-200 dark:border-brand-900/50">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>End-to-End Learning Consultant</span>
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            Crafting Immersive <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-400">Learning Experiences</span> that Drive Impact.
+                        </h1>
+                        <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+                            Hi, I’m Lea. I specialize in designing and implementing high-engagement corporate training, interactive digital assets, and comprehensive educational courses built on cognitive science and adult learning principles.
+                        </p>
+                        <div class="flex flex-wrap gap-4 pt-2">
+                            <a href="#portfolio" class="px-6 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lg shadow-brand-600/25 transition flex items-center space-x-2">
+                                <span>View Artifacts</span>
+                                <i class="fa-solid fa-arrow-down text-xs"></i>
+                            </a>
+                            <a href="#contact" class="px-6 py-3.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-semibold transition flex items-center space-x-2">
+                                <i class="fa-regular fa-envelope"></i>
+                                <span>Get in Touch</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 dark:border-slate-800 max-w-lg">
+                            <div>
+                                <span class="block text-2xl font-bold text-slate-900 dark:text-white">25+</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">Years Experience</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-slate-900 dark:text-white">50+</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">Courses Created</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-slate-900 dark:text-white">96%</span>
+                                <span class="text-xs text-slate-500 dark:text-slate-400">Learner Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-600 to-indigo-400 rounded-3xl blur-xl opacity-30 animate-pulse"></div>
+                            <div class="relative glass-card p-6 sm:p-8 rounded-3xl shadow-xl space-y-6">
+                                <!-- Profile Photo & Intro Header -->
+                                <div class="flex items-center space-x-4 border-b border-slate-200 dark:border-slate-800 pb-5">
+                                    <div class="relative">
+                                        <img src="leaprof.png" 
+                                             alt="Lea Thomson Profile Photo" 
+                                             class="w-16 h-16 rounded-2xl object-cover ring-2 ring-brand-500/50 shadow-md"
+                                             onerror="this.src='https://placehold.co/150x150/4f46e5/ffffff?text=LT'">
+                                        <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white dark:border-slate-900 rounded-full"></span>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold text-lg leading-snug">Lea Thomson</h3>
+                                        <p class="text-xs text-brand-600 dark:text-brand-400 font-semibold">Learning Consultant</p>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot text-slate-400 mr-1"></i>Available for Projects</p>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold mb-1">
+                                            <span>Analysis, Design and Implementation of Learning Solutions</span>
+                                            <span class="text-brand-600">98%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                            <div class="bg-brand-600 h-full rounded-full w-[98%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold mb-1">
+                                            <span>Assessment Design</span>
+                                            <span class="text-brand-600">95%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                            <div class="bg-brand-600 h-full rounded-full w-[95%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold mb-1">
+                                            <span>Facilitation & Workshop Delivery</span>
+                                            <span class="text-brand-600">92%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                            <div class="bg-brand-600 h-full rounded-full w-[92%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold mb-1">
+                                            <span>Technical Documentation</span>
+                                            <span class="text-brand-600">75%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                            <div class="bg-brand-600 h-full rounded-full w-[75%]"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-xs font-semibold mb-1">
+                                            <span>Onboarding Programme Design</span>
+                                            <span class="text-brand-600">70%</span>
+                                        </div>
+                                        <div class="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+                                            <div class="bg-brand-600 h-full rounded-full w-[70%]"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pt-2 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200 dark:border-slate-800">
+                                    <span><i class="fa-solid fa-check-circle text-emerald-500 mr-1"></i> Ready for projects</span>
+                                    <span>Remote</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Showcase Section -->
+        <section id="portfolio" class="py-20 bg-white dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-brand-600 dark:text-brand-400 text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950">Interactive Artifacts</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Showcase Portfolio</h2>
+                    <p class="text-slate-600 dark:text-slate-400">Explore my key training artifacts below. Each card provides direct interactive previews, simulations, and live access links.</p>
+                </div>
+
+                <!-- Portfolio Grid (6 Items) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Item 1: Online Learning  -->
+                    <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-salesforce"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wide">LMS Integration</span>
+                            <h3 class="text-xl font-bold mt-1 mb-3">Google Classroom Hub</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                An example of a fully structured online class featuring resources, a quiz, assignment workflows, and discussion boards.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <a href="https://classroom.google.com/c/OTAxMDQ1OTM0OTA3?cjc=tmbrab3i" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-sm">
+                                <span>View Classroom</span>
+                                <i class="fa-solid fa-external-link-alt text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Online Learning Trailhead -->
+                    <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-salesforce"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wide">e-Learning Curriculum</span>
+                            <h3 class="text-xl font-bold mt-1 mb-3">Trailhead Curriculum</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                Part of a comprehensive e-learning curriculum written for Salesforce's Trailhead platform to cover Enterprise Sales Management, from beginner to developer.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <a href="https://trailhead.salesforce.com/content/learn/trails/get-started-with-enterprise-sales-management-trail" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-sm">
+                                <span>Open Trailhead Trail</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Instructor Playbook -->
+                    <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide">Instructor Playbook</span>
+                            <h3 class="text-xl font-bold mt-1 mb-3">Sample Instructor Playbook</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                A sample playbook for instructors facilitating the online workshop shown in the multimedia example below.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <a href="https://drive.google.com/file/d/1Hl1UpGzBvaXcNoTr7OCQetND55XzbJsW/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-sm">
+                                <span>View Playbook</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Item 4: AI recording of a Customer Deck -->
+                    <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wide">Customer Slide Deck</span>
+                            <h3 class="text-xl font-bold mt-1 mb-3">Recording of Customer Deck</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                AI-recorded video of a deck created for a non-profit organization to facilitate their citizen scientist onboarding.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <button onclick="openModal('observerModal')" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-sm">
+                                <span>Watch Recording</span>
+                                <i class="fa-solid fa-play text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Sample Workshop Video -->
+                    <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-video"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-purple-600 dark:text-purple-400 uppercase tracking-wide">Multimedia Asset</span>
+                            <h3 class="text-xl font-bold mt-1 mb-3">Video of sample workshop</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                A recording of a sample workshop which may be delivered in person or online. The workshop is for curriculum designers looking to provide more active learning in their materials.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+                            <a href="https://drive.google.com/file/d/14_MefVvA8uxkmuz9_BXGSDNzdudrAtMr/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-sm">
+                                <span>Watch Video</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Quiz -->
+                    <div class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group md:col-span-2 lg:col-span-1">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400 flex items-center justify-center text-xl mb-5 group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <span class="text-xs font-semibold text-rose-600 dark:text-rose-400 uppercase tracking-wide">Interactive Assessment</span>
+                            <h3 class="text-xl font-bold mt-1 mb-3">Knowledge Check & Quiz</h3>
+                            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                                A College Orientation Quiz developed and delivered as part of student onboarding at Northampton College in 2016.
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col gap-3">
+                            <a href="https://forms.gle/WgXuUEjtb2kEiHLj8" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-sm font-semibold flex items-center justify-center space-x-2 transition shadow-sm">
+                                <span>College Orientation Quiz</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 sm:p-12 shadow-xl">
+                    <div class="text-center max-w-xl mx-auto mb-10 space-y-3">
+                        <span class="text-brand-600 dark:text-brand-400 text-xs font-bold uppercase tracking-widest">Let's Connect</span>
+                        <h2 class="text-3xl font-extrabold tracking-tight">Ready to Elevate Your Training?</h2>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm">Whether you need custom instructional design, course audits, or workshop facilitation, I'd love to hear from you.</p>
+                    </div>
+                    <form onsubmit="handleContact(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider mb-2">Email Address</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="jane@example.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider mb-2">Project Details / Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm" placeholder="Tell me about your training goals..."></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold shadow-lg shadow-brand-600/25 transition text-sm">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                    <div id="contact-success" class="hidden mt-6 p-4 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-center text-sm font-semibold border border-emerald-500/20">
+                        <i class="fa-solid fa-check-circle mr-2"></i> Thank you! Your message has been sent successfully. I will get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500 dark:text-slate-400">
+            <p>© 2026 Alex Morgan. All rights reserved.</p>
+            <div class="flex items-center space-x-6">
+                <a href="https://linkedin.com" target="_blank" class="hover:text-brand-600 transition"><i class="fa-brands fa-linkedin text-lg"></i></a>
+                <a href="https://github.com" target="_blank" class="hover:text-brand-600 transition"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="mailto:alex@example.com" class="hover:text-brand-600 transition"><i class="fa-solid fa-envelope text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS CONTAINER -->
+
+    <!-- 1. Slide Deck Modal -->
+    <div id="slideModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col">
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-presentation-screen text-blue-600"></i>
+                    <span class="font-bold text-base">Solution-Focused Training — Presentation Preview</span>
+                </div>
+                <button onclick="closeModal('slideModal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <!-- Slide Body -->
+            <div class="p-8 min-h-[300px] flex flex-col justify-between" id="slide-container">
+                <div>
+                    <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400" id="slide-badge">Slide 1 of 4</span>
+                    <h3 class="text-2xl font-bold mt-4 mb-3" id="slide-title">Introduction to Solution-Focused Training</h3>
+                    <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed" id="slide-content">
+                        Shift the training paradigm from problem diagnosis to strengths exploration. Empower learners to build upon existing competencies, fostering immediate behavioral change and psychological safety.
+                    </p>
+                </div>
+                <div class="mt-8 p-4 rounded-xl bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/50 text-xs text-slate-500 dark:text-slate-400" id="slide-note">
+                    <strong>Key Takeaway:</strong> Focus on exceptions where the problem does not occur to replicate success.
+                </div>
+            </div>
+            <!-- Slide Controls -->
+            <div class="px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+                <button onclick="prevSlide()" class="px-4 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-sm font-semibold transition flex items-center space-x-2">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Previous</span>
+                </button>
+                <span class="text-xs text-slate-500 font-medium" id="slide-counter">1 / 4</span>
+                <button onclick="nextSlide()" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition flex items-center space-x-2 shadow-sm">
+                    <span>Next Slide</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Scenario Walkthrough Modal -->
+    <div id="walkthroughModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col">
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-route text-emerald-600"></i>
+                    <span class="font-bold text-base">Scenario Training Walkthrough: Client Escalation</span>
+                </div>
+                <button onclick="closeModal('walkthroughModal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-8" id="walkthrough-body">
+                <!-- Dynamically updated walkthrough step -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Item 4: Observer Recording Modal -->
+    <div id="observerModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col">
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-video text-emerald-600"></i>
+                    <span class="font-bold text-base">Recording of Non-Profit Deck</span>
+                </div>
+                <button onclick="closeObserverModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white transition" aria-label="Close video">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-4 sm:p-6">
+                <video id="observerVideo" controls preload="metadata" class="w-full rounded-xl bg-black aspect-video">
+                    <source src="Observer1.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Video Modal -->
+    <div id="videoModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl flex flex-col">
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-video text-purple-600"></i>
+                    <span class="font-bold text-base">Problem-Based Scenario Video Mockup</span>
+                </div>
+                <button onclick="closeModal('videoModal'); pauseMockVideo();" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="relative bg-slate-950 rounded-2xl overflow-hidden aspect-video flex items-center justify-center shadow-inner group">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10 pointer-events-none"></div>
+                    <!-- Simulated video scene graphic -->
+                    <div class="text-center z-10 px-4 space-y-3" id="video-state-text">
+                        <div class="w-16 h-16 rounded-full bg-purple-600/90 text-white flex items-center justify-center mx-auto text-2xl shadow-lg cursor-pointer hover:scale-105 transition" onclick="toggleMockVideoPlay()">
+                            <i class="fa-solid fa-play ml-1" id="video-play-icon"></i>
+                        </div>
+                        <h4 class="text-white font-semibold text-sm">Case Study #4: Managing High-Stakes Client Friction</h4>
+                        <p class="text-slate-400 text-xs">Click play to simulate interactive problem-based video playback.</p>
+                    </div>
+                    <!-- Fake Video Progress Bar overlay -->
+                    <div class="absolute bottom-0 left-0 right-0 p-4 z-20 flex items-center space-x-3 bg-gradient-to-t from-slate-950 to-transparent">
+                        <button onclick="toggleMockVideoPlay()" class="text-white text-sm focus:outline-none">
+                            <i class="fa-solid fa-play" id="video-ctrl-icon"></i>
+                        </button>
+                        <span class="text-xs text-slate-300 font-mono" id="video-time">0:00 / 3:45</span>
+                        <div class="flex-grow h-1.5 bg-slate-700 rounded-full overflow-hidden cursor-pointer">
+                            <div id="video-progress" class="bg-purple-500 h-full w-[0%] transition-all duration-300"></div>
+                        </div>
+                        <button onclick="toggleFullscreenMock()" class="text-white text-sm focus:outline-none">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-4 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400">
+                    <span><i class="fa-solid fa-closed-captioning mr-1"></i> CC Enabled</span>
+                    <span>HD 1080p • 60fps</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Quiz Modal -->
+    <div id="quizModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl w-full max-w-2xl overflow-hidden shadow-2xl flex flex-col">
+            <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-list-check text-rose-600"></i>
+                    <span class="font-bold text-base">Interactive Formative Assessment Quiz</span>
+                </div>
+                <button onclick="closeModal('quizModal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div class="p-8" id="quiz-container">
+                <!-- Dynamically rendered quiz question -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Theme Toggle Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlElement.classList.add('dark');
+        } else {
+            htmlElement.classList.remove('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            if (htmlElement.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Modal Controls
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            if(modalId === 'walkthroughModal') initWalkthrough();
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+        function closeObserverModal() {
+            const observerVideo = document.getElementById('observerVideo');
+            observerVideo.pause();
+            observerVideo.currentTime = 0;
+            closeModal('observerModal');
+        }
+
+        // Slide Deck Simulator Data & Logic
+        const slides = [
+            {
+                badge: "Slide 1 of 4",
+                title: "Introduction to Solution-Focused Training",
+                content: "Shift the training paradigm from problem diagnosis to strengths exploration. Empower learners to build upon existing competencies, fostering immediate behavioral change and psychological safety.",
+                note: "Key Takeaway: Focus on exceptions where the problem does not occur to replicate success."
+            },
+            {
+                badge: "Slide 2 of 4",
+                title: "Core Principle: The Miracle Question",
+                content: "Asking learners to imagine overnight problem resolution helps uncover concrete, actionable goals rather than abstract complaints. This clarifies desired terminal behaviors for curriculum design.",
+                note: "Application: Use in onboarding workshops to establish positive learner baselines."
+            },
+            {
+                badge: "Slide 3 of 4",
+                title: "Scaling Progress & Competency",
+                content: "Using 1-to-10 rating scales allows learners to self-assess their current readiness and identify small, manageable steps (delta +1) needed to advance their skills without cognitive overload.",
+                note: "Design Tip: Incorporate self-reflection sliders in Articulate Rise modules."
+            },
+            {
+                badge: "Slide 4 of 4",
+                title: "Measuring Transfer of Training",
+                content: "Evaluation moves beyond Kirkpatrick Level 1 (satisfaction) to assess behavioral transfer on the job through peer coaching triads and supervisor check-ins.",
+                note: "Conclusion: Sustainable training bridges theory directly to daily workflows."
+            }
+        ];
+        let currentSlide = 0;
+
+        function updateSlideView() {
+            const s = slides[currentSlide];
+            document.getElementById('slide-badge').innerText = s.badge;
+            document.getElementById('slide-title').innerText = s.title;
+            document.getElementById('slide-content').innerText = s.content;
+            document.getElementById('slide-note').innerHTML = `<strong>Key Takeaway:</strong> ${s.note}`;
+            document.getElementById('slide-counter').innerText = `${currentSlide + 1} / ${slides.length}`;
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlideView();
+            }
+        }
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlideView();
+            }
+        }
+
+        // Scenario Walkthrough Decision Tree Data & Logic
+        const walkthroughSteps = {
+            start: {
+                title: "Step 1: The Frustrated Customer Encounter",
+                description: "A long-time client calls in irate because their portal access was revoked due to a billing system glitch. How do you respond as the frontline representative?",
+                options: [
+                    { text: "A) Immediately explain company policy regarding billing automation.", next: "step2a" },
+                    { text: "B) Validate their frustration and express empathy before checking account status.", next: "step2b" }
+                ]
+            },
+            step2a: {
+                title: "Branch Result: Policy-First Approach",
+                description: "Result: The client interrupts, feeling unheard and defensive. Escalation risk increases by 45%. Solution-focused training emphasizes connection before correction.",
+                options: [
+                    { text: "Try again with an empathetic approach", next: "step2b" },
+                    { text: "Restart walkthrough", next: "start" }
+                ]
+            },
+            step2b: {
+                title: "Step 2: De-escalation & Collaborative Solution",
+                description: "Resulting Success! By validating their concern, the client's vocal tone calms down. Now, how do you guide them toward a solution?",
+                options: [
+                    { text: "A) Ask the 'Miracle Question': 'What needs to happen today so you feel fully supported?'", next: "step3" },
+                    { text: "B) Tell them to wait 48 hours for billing to investigate.", next: "step2a" }
+                ]
+            },
+            step3: {
+                title: "Conclusion: Successful Resolution!",
+                description: "Outstanding! By combining empathy with solution-focused inquiry, you successfully restored access within 3 minutes and fortified client trust.",
+                options: [
+                    { text: "Restart Walkthrough", next: "start" }
+                ]
+            }
+        };
+
+        function renderWalkthroughStep(stepKey) {
+            const step = walkthroughSteps[stepKey];
+            let html = `
+                <h3 class="text-xl font-bold mb-3">${step.title}</h3>
+                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">${step.description}</p>
+                <div class="space-y-3">
+            `;
+            step.options.forEach(opt => {
+                html += `<button onclick="renderWalkthroughStep('${opt.next}')" class="w-full text-left p-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-50 dark:hover:bg-emerald-950/40 border border-slate-200 dark:border-slate-700 hover:border-emerald-500 text-sm font-medium transition flex items-center justify-between group">
+                    <span>${opt.text}</span>
+                    <i class="fa-solid fa-chevron-right text-xs text-slate-400 group-hover:text-emerald-600"></i>
+                </button>`;
+            });
+            html += `</div>`;
+            document.getElementById('walkthrough-body').innerHTML = html;
+        }
+        function initWalkthrough() {
+            renderWalkthroughStep('start');
+        }
+
+        // Mock Video Player Logic
+        let isVideoPlaying = false;
+        let videoInterval = null;
+        let videoProgressVal = 0;
+
+        function toggleMockVideoPlay() {
+            isVideoPlaying = !isVideoPlaying;
+            const playIcon = document.getElementById('video-play-icon');
+            const ctrlIcon = document.getElementById('video-ctrl-icon');
+            const stateText = document.getElementById('video-state-text');
+
+            if (isVideoPlaying) {
+                playIcon.className = "fa-solid fa-pause ml-0";
+                ctrlIcon.className = "fa-solid fa-pause";
+                stateText.style.opacity = "0.3";
+                videoInterval = setInterval(() => {
+                    videoProgressVal += 1;
+                    if (videoProgressVal > 100) videoProgressVal = 0;
+                    document.getElementById('video-progress').style.width = videoProgressVal + '%';
+                    let secs = Math.floor((videoProgressVal / 100) * 225);
+                    let m = Math.floor(secs / 60);
+                    let s = secs % 60;
+                    document.getElementById('video-time').innerText = `${m}:${s < 10 ? '0' : ''}${s} / 3:45`;
+                }, 300);
+            } else {
+                pauseMockVideo();
+            }
+        }
+        function pauseMockVideo() {
+            isVideoPlaying = false;
+            clearInterval(videoInterval);
+            document.getElementById('video-play-icon').className = "fa-solid fa-play ml-1";
+            document.getElementById('video-ctrl-icon').className = "fa-solid fa-play";
+            document.getElementById('video-state-text').style.opacity = "1";
+        }
+        function toggleFullscreenMock() {
+            alert("Fullscreen video simulation active.");
+        }
+
+        // Interactive Quiz Data & Logic
+        const quizQuestions = [
+            {
+                question: "What is the primary focus of solution-focused instructional design?",
+                options: [
+                    "Exhaustive root-cause analysis of past failures",
+                    "Building on learner strengths and identifying exceptions",
+                    "Strict reliance on rote memorization drills",
+                    "Eliminating all multimedia elements"
+                ],
+                correct: 1,
+                explanation: "Correct! Solution-focused training emphasizes what is already working and leverages learner competencies."
+            },
+            {
+                question: "Which instructional design model follows an agile, iterative prototyping approach?",
+                options: [
+                    "ADDIE",
+                    "SAM (Successive Approximation Model)",
+                    "Waterfall",
+                    "Bloom's Taxonomy"
+                ],
+                correct: 1,
+                explanation: "Correct! SAM emphasizes rapid prototyping and iterative cycles of design and evaluation."
+            }
+        ];
+        let currentQuizIndex = 0;
+        let score = 0;
+
+        function renderQuizQuestion() {
+            if (currentQuizIndex < quizQuestions.length) {
+                const q = quizQuestions[currentQuizIndex];
+                let html = `
+                    <div class="mb-4 flex items-center justify-between text-xs font-semibold text-slate-500">
+                        <span>Question ${currentQuizIndex + 1} of ${quizQuestions.length}</span>
+                        <span>Score: ${score}</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-6">${q.question}</h3>
+                    <div class="space-y-3" id="quiz-options">
+                `;
+                q.options.forEach((opt, idx) => {
+                    html += `<button onclick="checkAnswer(${idx})" class="w-full text-left p-4 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-rose-50 dark:hover:bg-rose-950/40 border border-slate-200 dark:border-slate-700 text-sm font-medium transition">
+                        ${String.fromCharCode(65 + idx)}. ${opt}
+                    </button>`;
+                });
+                html += `</div><div id="quiz-feedback" class="mt-4 hidden p-4 rounded-xl text-sm font-medium"></div>`;
+                document.getElementById('quiz-container').innerHTML = html;
+            } else {
+                document.getElementById('quiz-container').innerHTML = `
+                    <div class="text-center py-8 space-y-4">
+                        <div class="w-16 h-16 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center mx-auto text-3xl">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Quiz Completed!</h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm">You scored ${score} out of ${quizQuestions.length} correct.</p>
+                        <button onclick="resetQuiz()" class="px-6 py-3 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-semibold text-sm transition">
+                            Retake Quiz
+                        </button>
+                    </div>
+                `;
+            }
+        }
+
+        function checkAnswer(selectedIdx) {
+            const q = quizQuestions[currentQuizIndex];
+            const feedbackEl = document.getElementById('quiz-feedback');
+            feedbackEl.classList.remove('hidden');
+
+            if (selectedIdx === q.correct) {
+                score++;
+                feedbackEl.className = "mt-4 p-4 rounded-xl text-sm font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-check-circle mr-2"></i> ${q.explanation}`;
+            } else {
+                feedbackEl.className = "mt-4 p-4 rounded-xl text-sm font-semibold bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20";
+                feedbackEl.innerHTML = `<i class="fa-solid fa-xmark-circle mr-2"></i> Incorrect. ${q.explanation}`;
+            }
+
+            // Disable buttons & show next button
+            setTimeout(() => {
+                currentQuizIndex++;
+                renderQuizQuestion();
+            }, 2500);
+        }
+
+        function resetQuiz() {
+            currentQuizIndex = 0;
+            score = 0;
+            renderQuizQuestion();
+        }
+
+        // Contact Form Submission
+        function handleContact(e) {
+            e.preventDefault();
+            document.getElementById('contact-success').classList.remove('hidden');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
